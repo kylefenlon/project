@@ -6,7 +6,7 @@
         {% for day in days %}
         <div class="day-of-week">
         <h2><a href="/days/{{day.id}}">{{day.name}}</a></h2>
-        <h3>User: {{day.user.name}}</h3>
+        <h3> {{day.user.name}}</h3>
         <span>
             <div class="buttons">
                 <form class="delete-form" action="/days/{{day.id}}/delete" method="post">
@@ -16,6 +16,7 @@
             </div>
         </span>
         </form>
+        <h3><a href="https://i.ebayimg.com/images/g/v-4AAOSwstxU-DCJ/s-l400.jpg" class="link">Not feeling great</a></h3>
         </div>
         {% endfor %}
 </div>

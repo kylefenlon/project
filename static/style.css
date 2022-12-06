@@ -33,7 +33,7 @@ body{
     display: flex;
     justify-content: center;
     font-size: 4rem;
-    font-style: monospace;
+    text-decoration:underline;
 }
 
 .sub-title{
@@ -46,6 +46,7 @@ body{
   justify-content: center;
   font-size: 2rem;
   font-style: italic;
+  text-decoration: overline;
 
   }
 .nav-bar{
@@ -166,8 +167,8 @@ body{
 
 
 .exercises-container{
-    background: linear-gradient(132deg, #e1e1e8, #8c8d95,rgb(193, 185, 185));
-    background-size: 400% 400%;
+    border-style: inset;
+    border-width: 5px;
     border-radius: 50px;
     animation: Gradient 15s ease infinite;
     max-width: 100px;
@@ -231,4 +232,18 @@ body{
     border-radius: 10%;
     border-width: 5px;
   
+  }
+
+.link{
+  text-decoration: underline;
+}
+  .link:hover{
+    height: 5px;
+    padding-top: 5px;
+    margin-top: 5px;
+    color: #e25b2a;
+    text-decoration: none;
+    border-radius: 5px;
+    transform: skew(15deg);
+
   }
