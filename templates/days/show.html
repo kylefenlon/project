@@ -21,6 +21,15 @@
                                 {% endif %}
                             </a>
                         </h3>
+                        <button class="completed">
+                            <a href="/exercises/{{exercise.id}}/complete">{% if exercise.completed %}
+                                Set Incomplete
+                            {% else %}
+                                Set Complete
+                            {% endif %}
+                                
+                            </a>
+                        </button>
                         <div class="buttons">
                             <form class="delete-form" action="/exercises/{{exercise.id}}/delete" method="post">
                                 <button class="trash-button">

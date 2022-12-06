@@ -29,7 +29,7 @@ def select(id):
 
     if results:
         result = results[0]
-        day = day_repository.select(result['id'])
+        day = day_repository.select(result['day_id'])
         exercise = Exercise(result['name'], result['weight'], result['sets'], result['reps'], result['rest'], result['completed'], day, result['id'])
     return exercise
 

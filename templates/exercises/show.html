@@ -1,16 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1 class="title">Exercises</h1>
+<h1 class="title">{{exercise.name}}</h1>
 <p></p>
-    <div>
-        <p>{{exercise.name}}</p>
-        <p>{{exercise.weight}}</p>
-        <p>{{exercise.sets}}</p>
-        <p>{{exercise.reps}}</p>
-        <p>{{exercise.rest}}</p>
-        <p>{{exercise.completed}}</p>
-        <p>{{exercise.day.name}}</p>
+    <div class="exercise-display">
+        <p>Weight: <i>{{exercise.weight}}</i></p>
+        <p>Sets: <i>{{exercise.sets}}</i></p>
+        <p>Reps: <i>{{exercise.reps}}</i></p>
+        <p>Rest: <i>{{exercise.rest}}</i></p>
+        <p>Completed?: <i>{{exercise.completed}}</i></p>
+        <p>Day: <i>{{exercise.day.name}}</i></p>
         <a href="/exercises/{{exercise.id}}/edit">Edit</a>
     </div>
 {% endblock %}

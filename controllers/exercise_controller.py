@@ -16,7 +16,6 @@ def exercises():
 @exercises_blueprint.route('/exercises/<exercise_id>')
 def show_exercise(exercise_id):
     exercise = exercise_repository.select(int(exercise_id))
-    # pdb.set_trace()
     return render_template("exercises/show.html", exercise=exercise)
 
 #new (form)
@@ -70,4 +69,12 @@ def update_exercise(exercise_id):
     exercise = Exercise(name, weight, sets, reps, rest, completed, day, exercise_id)
     exercise_repository.update_exercise(exercise)
     return redirect('/days/' + day_id)
+
+@exercises_blueprint.route('/exercises/<exercise_id>/complete')
+def toggle_complete(exercise_id):
+    exercise = exercise_repository.select(exercise_id)
+    exercise.completed = not exercise.completed
+    exercise_repository.update_exercise(exercise)
+    return redirect(request.referrer)
+
 

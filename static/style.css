@@ -247,3 +247,14 @@ body{
     transform: skew(15deg);
 
   }
+
+.exercise-display{
+  display: grid;
+  justify-content: center;
+  font-size: 25px;
+  background: linear-gradient(132deg, #c6c6cb, #959cb6,rgb(161, 153, 153));
+  background-size: 400% 400%;
+  animation: Gradient 15s ease infinite;
+  border-radius: 20%;
+
+  }
