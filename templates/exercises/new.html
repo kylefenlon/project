@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="title">New Exercise</h1>
+
+<p></p>
+<div class="side">
+    <form action="/exercises" method="post">
+    <div class="input-box">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+    </div>
+    <div class="input-box">
+        <label for="weight">Weight</label>
+        <input type="text" id="weight" name="weight">
+    </div>
+    <div class="input-box">
+        <label for="sets">Sets</label>
+        <input type="number" id="sets" name="sets">
+    </div>
+    <div class="input-box">
+        <label for="reps">Reps</label>
+        <input type="number" id="reps" name="reps">
+    </div>
+    <div class="input-box">
+        <label for="rest">Rest</label>
+        <input type="text" id="rest" name="rest">
+    </div>
+    <div class="input-box">
+        <label for="completed">Completed:</label>
+        <select id="completed" name="completed">
+            <option value="true">True</option>
+            <option value="false">False</option>
+        </select>
+    </div>
+    <div class="input-box">
+        <label for="day">Day:</label>
+        <select id="day" name="day_id">
+            {% for day in days %}
+            <option value="{{ day.id }}">{{ day.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="button">
+    <button type="submit">Add Exercise</button>
+    </div>
+    </form>
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+

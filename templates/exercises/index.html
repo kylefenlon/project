@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 class="title">Exercises</h1>
+
+    {% for exercise in exercises %}
+    <section class="exercises-container">
+    <div class="exercise-content">
+       <div> <h3>{{exercise.day.name}}</h3></div>
+
+        <div><h3><a href="/exercises/{{exercise.id}}">{{exercise.name}} {% if exercise.completed %}
+                <i class="fa fa-check fa-1x" style="color :green"></i>
+                {% else %}
+                <i class="fa fa-times fa-1x" style="color: red"></i>
+                {% endif %}
+        </h3></a></div>
+        <div class="buttons">
+            <form class="delete-form" action="/exercises/{{exercise.id}}/delete" method="post">
+                <button class="trash-button">
+                    <i class="fa fa-trash-o fa-2x" style="color: red"></i>
+                </button>
+            </form>
+        </div>
+
+    </div>
+    </section>
+
+
+
+{% endfor %}
+{% endblock content %}

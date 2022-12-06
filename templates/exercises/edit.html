@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="title">Exercises</h1>
+
+<p></p>
+    <form action="/exercises/{{exercise.id}}" method="post">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" value="{{exercise.name}}" name="name">
+        </div>
+        <div>
+            <label for="weight">Weight</label>
+            <input type="text" id="weight" value="{{exercise.weight}}" name="weight">
+        </div>
+        <div>
+            <label for="sets">Sets</label>
+            <input type="number" id="sets" value="{{exercise.sets}}" name="sets">
+        </div>
+        <div>
+            <label for="reps">Reps</label>
+            <input type="number" id="reps" value="{{exercise.reps}}" name="reps">
+        </div>
+        <div>
+            <label for="rest">Rest</label>
+            <input type="text" id="rest" value="{{exercise.rest}}" name="rest">
+        </div>
+        <div>
+            <label for="completed">Completed:</label>
+            <select id="completed" name="completed">
+                <option value="true"
+                    {% if exercise.completed %} selected="selected" {% endif %}>True</option>
+            
+                <option value="false"
+                {% if exercise.completed == False %} selected="selected" {%endif%}>False</option>
+            </select>
+        </div>
+    <div>
+        <label for="day">Day:</label>
+        <select id="day" name="day_id">
+            {% for day in days %}
+                <option value="{{ day.id }}"
+                {% if exercise.day.id == day.id %} selected="selected" {% endif %}>{{ day.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <button type="submit">Update Exercise</button>
+    </form>
+    
+{% endblock %}
