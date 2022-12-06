@@ -155,6 +155,7 @@ body{
 
 .button{
     display: inline-block;
+    justify-content: center;
     margin-top: 12px;
     color: rgb(65, 62, 62);
     font-size: 18px;
@@ -162,7 +163,7 @@ body{
     border: none;
     padding: 8px 16px;
     border-radius: 6px;
-    background: #3e2093;
+    background: #eb4c3d;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -180,7 +181,7 @@ body{
 
 
 .exercises-container{
-    border-style: inset;
+    border-style: outset;
     border-width: 5px;
     border-radius: 50px;
     animation: Gradient 15s ease infinite;
@@ -288,11 +289,17 @@ body{
   display: flex;
   padding-top: 10%;
   justify-content: center;
+  border: inset;
+  border-radius: 30%;
+  border-width: 5px;
+  background-color: whitesmoke;
+  align-items: center;
 }
 
 .new-ex-in{
   display: flex;
   justify-content: space-around;
+  align-items: center;
   flex-direction: column;
   padding: 10%;
 }
