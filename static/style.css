@@ -1,6 +1,9 @@
 body{
-  background-color: whitesmoke;
+  background: linear-gradient(132deg, #fafafb, #969494,rgb(253, 251, 251));
+  background-size: 500% 500%;
+  animation: Gradient 15s ease infinite;
 }
+
 
 .content-container{
     max-width: 40rem;
@@ -108,6 +111,7 @@ body{
     font-size: large;
     font-family: monospace, sans-serif;
     background-color: whitesmoke;
+    border-radius: 5%;
 
  }
 .main-para div{
@@ -141,10 +145,12 @@ body{
   }
 
 
-.side{
-    font-size: 23px;
-    font-weight: 600;
-    color: #462e89;
+.button-update{
+  display: inline-block;
+  margin-top: 20px;
+  color: green;
+  background-color: black;
+  border-radius: 10%;
 }
 
 .button{
@@ -159,6 +165,13 @@ body{
     background: #3e2093;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+.completed-button{
+  display:inline-block;
+  background:  linear-gradient(132deg, #d3d3e7, #b0f3b7, rgb(246, 240, 240));
+  background-size: 400%, 400%;
+  border-radius: 20%;
 }
 
 .button [type="button"]:hover{
@@ -177,6 +190,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     padding: 2rem;
     min-height: 180px;
     max-height: 200px
@@ -252,10 +266,10 @@ body{
   display: grid;
   justify-content: center;
   font-size: 25px;
-  background: linear-gradient(132deg, #c6c6cb, #959cb6,rgb(161, 153, 153));
-  background-size: 400% 400%;
   animation: Gradient 15s ease infinite;
   border-radius: 20%;
+  border-style: inset;
+  border-width: 5px;
 
   }
 
@@ -263,3 +277,29 @@ body{
     width: 100%;
     border-radius: 10%;
   }
+
+  .image2{
+    width: 100%;
+    height: 60%;
+    border-radius: 40%;
+  }
+
+.new-ex{
+  display: flex;
+  padding-top: 10%;
+  justify-content: center;
+}
+
+.new-ex-in{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10%;
+}
+
+.side{
+  font-size: 23px;
+  font-weight: 600;
+  color: #0f0f10;
+  padding: 5%;
+}
