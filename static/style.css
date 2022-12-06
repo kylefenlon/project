@@ -1,3 +1,7 @@
+body{
+  background-color: whitesmoke;
+}
+
 .content-container{
     max-width: 40rem;
     margin: 0 auto;
@@ -21,18 +25,29 @@
 
 .title{
     color: rgb(48, 46, 46);
-    border-radius: 70%;
     animation: Gradient 15s ease infinite;
     position: relative;
     overflow: hidden;
-    padding:0;
+    padding:30px;
     margin:-8px;
     display: flex;
     justify-content: center;
     font-size: 4rem;
-    font-style: oblique;
+    font-style: monospace;
 }
 
+.sub-title{
+  animation: Gradient 15s ease infinite;
+  position: relative;
+  overflow: hidden;
+  padding:50px;
+  margin:-8px;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  font-style: italic;
+
+  }
 .nav-bar{
     color: rgb(234, 40, 40);
     float: right;
@@ -94,6 +109,19 @@
     background-color: whitesmoke;
 
  }
+.main-para div{
+  padding-top: auto;
+}
+
+ .quote {
+  display: flex;
+  padding: auto;
+  justify-content: center;
+  font-size: large;
+  font-family: monospace, sans-serif;
+  background-color: whitesmoke;
+
+ }
 
 .input-box{
     height: 50px;
@@ -104,6 +132,7 @@
     font-size: 125%;
     /* background: #F0F1F8; */
     background: linear-gradient(132deg, #d3d3e7, #212335, rgb(179, 12, 12));
+    background-size: 400% 400%;
     border-radius: 6px;
     padding: 0 15px;
     padding-top: 2.5%;
@@ -145,9 +174,11 @@
     margin: auto;
     padding: 16px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-between;
     padding: 2rem;
+    min-height: 180px;
+    max-height: 200px
 }
 
 .exercises-content{
@@ -157,10 +188,9 @@
 }
 
 .days-container{
+  border: #212335;
   background-color: whitesmoke;
   max-width: 30%;
-  /* display: flex;
-  justify-content: space-around; */
 }
 
 @keyframes Gradient {
@@ -173,4 +203,32 @@
     100% {
       background-position: 0% 50%;
     }
+  }
+
+  .exercises-flex {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .week-flex{
+    padding-top: 10%;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .day-of-week{
+    display: flex;
+    flex: wrap;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    border-style: outset;
+    border-radius: 10%;
+    border-width: 5px;
+  
   }

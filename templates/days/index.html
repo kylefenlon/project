@@ -2,20 +2,21 @@
 
 {% block content %}
 <h1 class="title"> Days</h1>
-<section class="days-container">
-{% for day in days %}
-
-<h2>{{day.name}}</h2>
-<h3>User: {{day.user.name}}</h3>
-<span>
-    <div class="buttons">
-        <form class="delete-form" action="/days/{{day.id}}/delete" method="post">
-            <button class="trash=button">
-                <i class="fa fa-trash-o fa-2x" style="color: red"></i>
-            </button>
-    </div>
-</span>
-</form>
-{% endfor %}
-</section>
+<div class="week-flex">
+        {% for day in days %}
+        <div class="day-of-week">
+        <h2><a href="/days/{{day.id}}">{{day.name}}</a></h2>
+        <h3>User: {{day.user.name}}</h3>
+        <span>
+            <div class="buttons">
+                <form class="delete-form" action="/days/{{day.id}}/delete" method="post">
+                    <button class="trash=button">
+                        <i class="fa fa-trash-o fa-2x" style="color: red"></i>
+                    </button>
+            </div>
+        </span>
+        </form>
+        </div>
+        {% endfor %}
+</div>
 {% endblock %}

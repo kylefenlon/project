@@ -44,13 +44,16 @@ def delete(id):
     run_sql(sql, values)
 
 
-def exercises(day):
+def exercises(day_id):
     exercises = []
     sql = "SELECT * FROM exercises WHERE day_id = %s"
-    values = [day.id]
+    values = [day_id]
     results = run_sql(sql, values)
+    day = select(day_id)
     for row in results:
         exercise = Exercise(row['name'], row['weight'], row['sets'], row['reps'], row['rest'], row['completed'], day, row['id'])
         exercises.append(exercise)
     return exercises
+
+
 

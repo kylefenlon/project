@@ -69,5 +69,5 @@ def update_exercise(exercise_id):
     day = day_repository.select(day_id)
     exercise = Exercise(name, weight, sets, reps, rest, completed, day, exercise_id)
     exercise_repository.update_exercise(exercise)
-    return redirect('/exercises')
+    return redirect('/days/' + day_id)
 

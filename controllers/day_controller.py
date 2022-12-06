@@ -14,7 +14,8 @@ def days():
 def show_day(id):
     day = day_repository.select(id)
     user = user_repository.select(day)
-    return render_template("/days/show.html", day=day, user=user)
+    exercises = day_repository.exercises(id)
+    return render_template("/days/show.html", day=day, user=user, exercises=exercises)
 
 #new (form)
 @days_blueprint.route('/days/new')
@@ -38,3 +39,4 @@ def create_day():
 def delete_exercise(day_id):
     day_repository.delete(day_id)
     return redirect('/days')
+
