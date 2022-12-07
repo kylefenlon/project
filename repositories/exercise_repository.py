@@ -42,11 +42,13 @@ def delete(id):
     values = [id]
     run_sql(sql, values)
 
+
+#method for updating the exercise, the sql will have to be passed with the values for the class exercise that are just raw data at this point
+#such as the name, weight etc and using the values from the class to pass it through = %s... and adding the id at the end,
+#using the object name and values to match up with the raw data stored in the database to then update the instance
+#use the run_sql to match up the sql and values
+
 def update_exercise(exercise):
     sql = "UPDATE exercises SET (name, weight, sets, reps, rest, completed, day_id) = (%s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
     values = [exercise.name, exercise.weight, exercise.sets, exercise.reps, exercise.rest, exercise.completed, exercise.day.id, exercise.id]
     run_sql(sql, values)
-
-#method for updating the exercise, the sql will have to passed with the values forr the class exercise,
-#such as the name, weight etc and using the values from the class to pass it through = %s... and adding the id at the end,
-#using the object name and value
