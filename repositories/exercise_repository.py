@@ -46,3 +46,7 @@ def update_exercise(exercise):
     sql = "UPDATE exercises SET (name, weight, sets, reps, rest, completed, day_id) = (%s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
     values = [exercise.name, exercise.weight, exercise.sets, exercise.reps, exercise.rest, exercise.completed, exercise.day.id, exercise.id]
     run_sql(sql, values)
+
+#method for updating the exercise, the sql will have to passed with the values forr the class exercise,
+#such as the name, weight etc and using the values from the class to pass it through = %s... and adding the id at the end,
+#using the object name and value
